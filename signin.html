@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix - Sign In</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        body{
+            background:#0b0b0f;
+            color:white;
+            overflow-x:hidden;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            position: relative;
+        }  
+        
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), 
+                        url('https://images.unsplash.com/photo-1574267432553-4b4628081c31?q=80&w=2073&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: zoomBg 20s infinite alternate ease-in-out;
+        }
+
+        @keyframes zoomBg {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        /* Back to Home Button */
+        .back-home {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .back-home:hover {
+            background: #ff003c;
+            color: white;
+            transform: translateX(-5px);
+            border-color: #ff003c;
+        }
+
+        .signin-container{
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding:40px;
+            border-radius:20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+            max-width:450px;
+            width:100%;
+        }
+
+        .signin-container h2{
+            font-size:35px;
+            font-weight:700;
+            color:#ff003c;
+            margin-bottom:30px;
+            text-align:center;
+        }
+
+        .form-control{
+            background:rgba(255,255,255,0.1);
+            border:1px solid rgba(255,255,255,0.2);
+            color:white;
+            padding:12px 20px;
+            border-radius:10px;
+        }
+
+        .form-control:focus{
+            background:rgba(255,255,255,0.15);
+            border-color:#ff003c;
+            box-shadow:0 0 0 0.25rem rgba(255,0,60,0.25);
+            color:white;
+        }
+
+        .form-control::placeholder{
+            color:rgba(255,255,255,0.6);
+        }
+
+        .btn-signin{
+            background:#ff003c;
+            color:white;
+            padding:12px 30px;
+            border:none;
+            border-radius:10px;
+            font-weight:600;
+            transition:0.4s;
+            width:100%;
+        }
+         
+        .btn-signin:hover{
+            background:white;
+            color:#ff003c;
+            transform:translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+
+    <!-- Back to Home -->
+    <a href="index.html" class="back-home">
+        <i class="bi bi-arrow-left"></i> Back to Home
+    </a>
+
+    <div class="signin-container" data-aos="zoom-in" data-aos-duration="1000">
+        <h2>Sign In to StreamFlix</h2>
+        <form id="loginForm">
+            <div class="mb-3" data-aos="fade-up" data-aos-delay="200">
+                <select class="form-control form-select" id="loginRole" required style="background-color: #1a1a24; color: white;">
+                    <option value="" disabled selected>Select Your Role</option>
+                    <option value="User">User</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Creator">Creator</option>
+                </select>
+            </div>
+            <div class="mb-3" data-aos="fade-up" data-aos-delay="200">
+                <input type="email" class="form-control" id="loginEmail" placeholder="Email Address" required>
+            </div>
+            <div class="mb-4 position-relative" data-aos="fade-up" data-aos-delay="300">
+                <div class="input-group">
+                    <input type="password" class="form-control" id="loginPass" placeholder="Password" required>
+                    <button class="btn btn-outline-secondary toggle-password" type="button" style="border-radius: 0 10px 10px 0; border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.6);">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+            <button type="submit" class="btn-signin" data-aos="fade-up" data-aos-delay="400">Sign In</button>
+            <p class="text-center mt-3" data-aos="fade-up" data-aos-delay="500">
+                Don't have an account? <a href="signup.html" class="text-danger text-decoration-none fw-bold">Sign Up</a>
+            </p>
+        </form>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration:1200,
+            once:true
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

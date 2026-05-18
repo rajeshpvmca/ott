@@ -1,0 +1,195 @@
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix OTT</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+    
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <h1>Unlimited Movies, TV Shows & Web Series</h1>
+                    <p class="my-4">
+                        Watch trending movies, premium web series, live sports and entertainment anytime anywhere.
+                    </p>
+
+                    <button class="btn-stream me-3">
+                        <i class="bi bi-play-fill"></i> Watch Now
+                    </button>
+
+                    <button class="btn btn-outline-light rounded-pill px-4 py-3">
+                        Explore More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>    
+    
+    <!-- Trending Movies -->
+    <section class="py-5" id="movies">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Trending Movies</h2>
+
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+                    <div class="movie-card">
+                        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1170&auto=format&fit=crop" alt="movie">
+                        <div class="play-overlay">
+                            <i class="bi bi-play-circle-fill play-icon"></i>
+                        </div>
+                        <div class="movie-content">
+                            <h5>Dark Knight</h5>
+                            <p>Action | Adventure | Thriller</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="movie-card">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1169&auto=format&fit=crop" alt="movie">
+                        <div class="play-overlay">
+                            <i class="bi bi-play-circle-fill play-icon"></i>
+                        </div>
+                        <div class="movie-content">
+                            <h5>Red Notice</h5>
+                            <p>Crime | Action | Comedy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="movie-card">
+                        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1170&auto=format&fit=crop" alt="movie">
+                        <div class="play-overlay">
+                            <i class="bi bi-play-circle-fill play-icon"></i>
+                        </div>
+                        <div class="movie-content">
+                            <h5>Moon Light</h5>
+                            <p>Drama | Sci‑Fi | Fantasy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="movie-card">
+                        <img src="https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?q=80&w=1170&auto=format&fit=crop" alt="movie">
+                        <div class="play-overlay">
+                            <i class="bi bi-play-circle-fill play-icon"></i>
+                        </div>
+                        <div class="movie-content">
+                            <h5>Kingdom War</h5>
+                            <p>Adventure | Historical</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Features -->
+    <section class="py-5" id="features">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Why Choose Us?</h2>
+
+            <div class="row g-4 mt-3">
+
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="feature-box text-center">
+                        <i class="bi bi-tv"></i>
+                        <h4>4K Ultra HD</h4>
+                        <p>Enjoy crystal clear streaming experience with ultra high quality visuals.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box text-center">
+                        <i class="bi bi-cloud-arrow-down"></i>
+                        <h4>Offline Download</h4>
+                        <p>Download your favorite shows and watch them anytime without internet.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box text-center">
+                        <i class="bi bi-phone"></i>
+                        <h4>Multi Device</h4>
+                        <p>Stream on mobile, TV, tablet and laptop with one premium account.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Premium Section -->
+    <section class="py-5" id="premium">
+        <div class="container">
+            <div class="premium text-center" data-aos="zoom-in-up">
+                <h2>Upgrade To Premium</h2>
+                <p class="mt-3 mb-4">
+                    Unlock exclusive movies, premium originals and ad-free streaming.
+                </p>
+
+                <button class="btn btn-light rounded-pill px-5 py-3 fw-bold">
+                    Get Premium
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // Function to load components
+        async function loadComponents() {
+            // Load Header
+            const headerRes = await fetch('header.html');
+            document.getElementById('header-placeholder').innerHTML = await headerRes.text();
+            
+            // Load Footer
+            const footerRes = await fetch('footer.html');
+            document.getElementById('footer-placeholder').innerHTML = await footerRes.text();
+
+            // Initialize AOS after components load
+            AOS.init({
+                duration: 1200,
+                once: true
+            });
+        }
+
+        loadComponents();
+    </script>
+</body>
+</html>

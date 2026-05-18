@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard-navbar {
+            background: #0b0b0f !important; /* Dark background for navbar */
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .sidebar {
+            background: #16161d !important;
+            min-height: calc(100vh - 70px);
+            border-right: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border for separation */
+        }
+        .stat-card {
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            background: #1c1c24 !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important; /* Light border for glassmorphism */
+            color: white; /* Ensure text is white */
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff003c !important;
+            background: #23232d !important;
+        }
+        .stat-card i {
+            opacity: 0.8; /* Slightly transparent icons */
+            color: #ff003c; /* Red color for icons */
+        }
+        .sidebar-link.active {
+            background: rgba(255, 0, 60, 0.1) !important;
+            color: #ff003c !important;
+            border-left: 4px solid #ff003c !important;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-dark sticky-top dashboard-navbar px-3 px-md-4" style="height: 70px;"> <!-- Fixed height for navbar -->
+    <div class="container-fluid d-flex align-items-center justify-content-between p-0">
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler d-md-none me-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas">
+                <i class="fa-solid fa-bars text-white"></i> <!-- White hamburger icon -->
+            </button>
+
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html"> <!-- Link to homepage -->
+                <span style="color: #ff003c; font-size: 1.6rem; letter-spacing: -1px;">StreamFlix</span> <!-- Themed brand name -->
+            </a>
+        </div>
+
+        <div class="text-white d-flex align-items-center gap-2 gap-md-3">
+            <div class="text-end">
+                <span id="userName" class="fw-semibold" style="font-size: 0.9rem;"></span>
+                <span class="d-none d-md-inline opacity-50"> | <span id="userEmail" class="small fw-normal opacity-75"></span></span>
+            </div>
+            <!-- Logout button -->
+            <button class="btn btn-danger btn-sm d-flex align-items-center gap-2 px-2 px-md-3" onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="d-none d-md-inline">Sign Out</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Sidebar -->
+        <div class="col-lg-2 col-md-3 sidebar p-0 d-none d-md-block"> <!-- Desktop sidebar -->
+            <div class="p-3"><h6 class="text-muted small text-uppercase fw-bold mb-3">Main Menu</h6></div>
+            <ul class="nav flex-column" id="sidebarMenu">
+                <!-- Links loaded dynamically by JS -->
+            </ul>
+        </div>
+
+        <!-- Mobile Sidebar (Offcanvas) -->
+        <div class="offcanvas offcanvas-start bg-dark text-white d-md-none" tabindex="-1" id="sidebarOffcanvas"> <!-- Mobile offcanvas sidebar -->
+            <div class="offcanvas-header border-bottom border-secondary">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body p-0">
+                <ul class="nav flex-column p-3" id="mobileMenu">
+                    <!-- Links loaded dynamically by JS -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-lg-10 col-md-9 col-12 p-3 p-md-4 main-content">
+            <div id="contentBox" class="bg-transparent border-0"> <!-- Dynamic content area --></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+</script>
+<script src="dashboard.js"></script>
+</body>
+</html>

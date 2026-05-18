@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies - StreamFlix</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .movie-hero {
+            height: 80vh;
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.2)), 
+                        url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .category-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid #ff003c;
+        }
+
+        .movie-row {
+            margin-bottom: 40px;
+        }
+
+        /* Enhanced Card for Movies Page */
+        .movie-card-premium {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
+
+        .movie-card-premium img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .movie-card-premium:hover {
+            transform: scale(1.1);
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(255, 0, 60, 0.5);
+        }
+
+        .badge-new {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff003c;
+            padding: 2px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Featured Movie Spotlight -->
+    <section class="movie-hero">
+        <div class="container">
+            <div class="col-lg-6" data-aos="fade-right">
+                <span class="badge bg-danger mb-3">Featured Premiere</span>
+                <h1 class="display-3 fw-bold">INTERSTELLAR</h1>
+                <p class="lead my-4 text-light">
+                    When Mankind's time on Earth is coming to an end, a team of researchers undertakes the most important mission in human history.
+                </p>
+                <div class="d-flex gap-3">
+                    <button class="btn-stream"><i class="bi bi-play-fill"></i> Play Now</button>
+                    <button class="btn btn-outline-light rounded-pill px-4"><i class="bi bi-info-circle"></i> More Info</button>
+                </div>
+            </div>
+        </div>
+    </section>    
+    
+    <!-- Movie Browsing Section -->
+    <div class="container mt-5">
+        
+        <!-- Trending Now -->
+        <div class="movie-row" data-aos="fade-up">
+            <h3 class="category-title">Trending Now</h3>
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="movie-card-premium">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=500&auto=format&fit=crop" alt="movie">
+                        <span class="badge-new">New</span>
+                    </div>
+                </div>
+                <!-- Add more movie items here -->
+                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=500&auto=format&fit=crop" alt="movie"></div></div>
+                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=500&auto=format&fit=crop" alt="movie"></div></div>
+                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=500&auto=format&fit=crop" alt="movie"></div></div>
+                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=500&auto=format&fit=crop" alt="movie"></div></div>
+                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=500&auto=format&fit=crop" alt="movie"></div></div>
+            </div>
+        </div>
+
+        <!-- Popular on StreamFlix -->
+        <div class="movie-row" data-aos="fade-up">
+            <h3 class="category-title">Popular on StreamFlix</h3>
+            <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="https://images.unsplash.com/photo-1512113569143-14620023a105?q=80&w=500&auto=format&fit=crop" alt="movie"></div></div>
+                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=500&auto=format&fit=crop" alt="movie"></div></div>
+                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=500&auto=format&fit=crop" alt="movie"></div></div>
+                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?q=80&w=500&auto=format&fit=crop" alt="movie"></div></div>
+                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="https://images.unsplash.com/photo-1542204172-3c359998d754?q=80&w=500&auto=format&fit=crop" alt="movie"></div></div>
+                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?q=80&w=500&auto=format&fit=crop" alt="movie"></div></div>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        async function loadComponents() {
+            const headerRes = await fetch('header.html');
+            document.getElementById('header-placeholder').innerHTML = await headerRes.text();
+            
+            const footerRes = await fetch('footer.html');
+            document.getElementById('footer-placeholder').innerHTML = await footerRes.text();
+
+            AOS.init({ duration: 1200, once: true });
+        }
+        loadComponents();
+    </script>
+</body>
+</html>
