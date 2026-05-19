@@ -13,7 +13,6 @@ if (signupForm) {
     const confirmPass = document.getElementById("regConfirmPass").value;
 
     if (password !== confirmPass) {
-        alert("Passwords do not match!");
         return;
     }
 
@@ -21,8 +20,6 @@ if (signupForm) {
       "user_" + email,
       JSON.stringify({ name, role, email, password })
     );
-
-    alert("Registration Successful!");
     window.location.href = "signin.html";
   });
 }
