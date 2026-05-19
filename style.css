@@ -368,11 +368,9 @@
         }
 
         .back-home:hover {
-            background: #ff003c;
-            color: white;
-            transform: translateX(-5px);
-            border-color: #ff003c;
-            box-shadow: 0 4px 20px rgba(255, 0, 60, 0.4);
+            background:white;
+            color:#ff003c;
+            transform:translateY(-3px);
         }
 
         @media (max-width: 768px) {
