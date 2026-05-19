@@ -16,64 +16,8 @@
 
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-        
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .movie-hero {
-            height: 80vh;
-            background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.2)), 
-                        url('assets/images/moviesbanner.webp');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-        }
 
-        .category-title {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            padding-left: 10px;
-            border-left: 4px solid #ff003c;
-        }
-
-        .movie-row {
-            margin-bottom: 40px;
-        }
-
-        /* Enhanced Card for Movies Page */
-        .movie-card-premium {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: 0.5s ease;
-            cursor: pointer;
-        }
-
-        .movie-card-premium img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .movie-card-premium:hover {
-            transform: scale(1.1);
-            z-index: 10;
-            box-shadow: 0 0 20px rgba(255, 0, 60, 0.5);
-        }
-
-        .badge-new {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #ff003c;
-            padding: 2px 10px;
-            font-size: 12px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
 
@@ -103,54 +47,974 @@
                 </div>
             </div>
         </div>
-    </section>    
+    </section>  
     
-    <!-- Movie Browsing Section -->
-    <div class="container mt-5">
-        
-        <!-- Trending Now -->
-        <div class="movie-row" data-aos="fade-up">
-            <h3 class="category-title">Trending Now</h3>
-            <div class="row g-3">
-                <div class="col-6 col-md-4 col-lg-2">
-                    <div class="movie-card-premium">
-                        <img src="assets/images/movie1.webp" alt="movie">
-                        <span class="badge-new">New</span>
-                    </div>
+    
+    <!-- Hero Section -->
+    <!-- <section class="hero">
+        <video muted loop playsinline class="hero-video" id="heroVideo">
+            <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <h1>INTERSTELLAR</h1>
+                    <p class="my-4">
+                    When Mankind's time on Earth is coming to an end, a team of researchers undertakes the most important mission in human history.
+                    </p>
+
+                <div class="d-flex gap-3">
+                    <button class="btn btn-danger rounded-pill px-4" id="playBtn"><i class="bi bi-play-fill"></i> Play Now</button>
+                    <button class="btn btn-outline-light rounded-pill px-3">More</button>
                 </div>
-                <!-- Add more movie items here -->
-                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="assets/images/movie2.webp" alt="movie"></div></div>
-                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="assets/images/movie3.webp" alt="movie"></div></div>
-                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="assets/images/movie4.webp" alt="movie"></div></div>
-                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="assets/images/movie5.webp" alt="movie"></div></div>
-                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="assets/images/movie6.webp" alt="movie"></div></div>
+
+                    
+                    
+                </div>
             </div>
         </div>
+    </section>  -->
 
-        <!-- Popular on Stackly -->
-        <div class="movie-row" data-aos="fade-up">
-            <h3 class="category-title">Popular on Stackly</h3>
-            <div class="row g-3">
-                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="assets/images/movie4.webp" alt="movie"></div></div>
-                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="assets/images/popular2.webp" alt="movie"></div></div>
-                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="assets/images/popular3.webp" alt="movie"></div></div>
-                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="assets/images/popular4.webp" alt="movie"></div></div>
-                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="assets/images/movie6.webp" alt="movie"></div></div>
-                <div class="col-6 col-md-4 col-lg-2"><div class="movie-card-premium"><img src="assets/images/popular6.webp" alt="movie"></div></div>
+
+    <!-- =========================
+     BLOCKBUSTER MOVIES
+========================= -->
+<section class="py-5" id="movies">
+
+    <div class="container">
+
+        <h2 class="section-title text-center mb-5"
+            data-aos="fade-up">
+
+            Blockbuster Movies
+
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Movie 1 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/avatar.webp"
+                         class="movie-img"
+                         alt="Avatar">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/avatar.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Avatar 2</h5>
+
+                        <p>Sci-Fi | Adventure</p>
+
+                    </div>
+
+                </div>
+
             </div>
+
+            <!-- Movie 2 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/topgun.webp"
+                         class="movie-img"
+                         alt="Jawan">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/topgun.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Top Gun Maverick</h5>
+
+                        <p>Action | Drama</p>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 3 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/spiderman.webp"
+                         class="movie-img"
+                         alt="John Wick">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/spiderman.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                         <h5>Spider-Man</h5>
+
+                        <p>Action | Sci-Fi</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 4 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/dune.webp"
+                         class="movie-img"
+                         alt="Avatar">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/dune.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                         <h5>Dune Part Two</h5>
+
+                        <p>Sci-Fi | Adventure</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
+
+</section>
+
+<!-- Tamil Movies -->
+<section class="py-5" id="movies">
+
+    <div class="container">
+
+        <h2 class="section-title text-center mb-5"
+            data-aos="fade-up">
+
+            Tamil Movies
+
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Movie 1 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/vikram.webp"
+                         class="movie-img"
+                         alt="Vikram">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/vikram.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Vikram</h5>
+
+                        <p>Action | Thriller</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 2 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/jailer.webp"
+                         class="movie-img"
+                         alt="Jailer">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/jailer.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Jailer</h5>
+
+                        <p>Action | Comedy</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 3 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/leo.webp"
+                         class="movie-img"
+                         alt="Leo">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/leo.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Leo</h5>
+
+                        <p>Action | Crime</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 4 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/maamannan.webp"
+                         class="movie-img"
+                         alt="Maamannan">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/maamannan.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Maamannan</h5>
+
+                        <p>Drama | Political</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Hindi Movies -->
+<section class="py-5" id="movies">
+
+    <div class="container">
+
+        <h2 class="section-title text-center mb-5"
+            data-aos="fade-up">
+
+            Hindi Movies
+
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Movie 1 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/pathaan.webp"
+                         class="movie-img"
+                         alt="Pathaan">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/pathaan.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Pathaan</h5>
+
+                        <p>Action | Thriller</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 2 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/jawan.webp"
+                         class="movie-img"
+                         alt="Jawan">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/jawan.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Jawan</h5>
+
+                        <p>Action | Drama</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 3 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/animal.webp"
+                         class="movie-img"
+                         alt="Animal">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/animal.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Animal</h5>
+
+                        <p>Action | Crime</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 4 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/dunki.webp"
+                         class="movie-img"
+                         alt="Dunki">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/dunki.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Dunki</h5>
+
+                        <p>Comedy | Drama</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- English Movies -->
+<section class="py-5" id="movies">
+
+    <div class="container">
+
+        <h2 class="section-title text-center mb-5"
+            data-aos="fade-up">
+
+            English Movies
+
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Movie 1 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/oppenheimer.webp"
+                         class="movie-img"
+                         alt="Oppenheimer">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/oppenheimer.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Oppenheimer</h5>
+
+                        <p>Biographical | Drama</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 2 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/barbie.webp"
+                         class="movie-img"
+                         alt="Barbie">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/barbie.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Barbie</h5>
+
+                        <p>Comedy | Fantasy</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 3 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/guardians.webp"
+                         class="movie-img"
+                         alt="Guardians">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/guardians.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Guardians Vol.3</h5>
+
+                        <p>Sci-Fi | Action</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 4 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/johnwick.webp"
+                         class="movie-img"
+                         alt="John Wick">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/johnwick.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>John Wick 4</h5>
+
+                        <p>Action | Thriller</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Telugu Movies -->
+<section class="py-5" id="movies">
+
+    <div class="container">
+
+        <h2 class="section-title text-center mb-5"
+            data-aos="fade-up">
+
+            Telugu Movies
+
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Movie 1 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/rrr.webp"
+                         class="movie-img"
+                         alt="RRR">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/rrr.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>RRR</h5>
+
+                        <p>Action | Drama</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 2 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/pushpa.webp"
+                         class="movie-img"
+                         alt="Pushpa">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/pushpa.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Pushpa</h5>
+
+                        <p>Action | Crime</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 3 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/baahubali.webp"
+                         class="movie-img"
+                         alt="Baahubali">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/baahubali.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Baahubali 2</h5>
+
+                        <p>Fantasy | Action</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 4 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/salaar.webp"
+                         class="movie-img"
+                         alt="Salaar">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/salaar.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Salaar</h5>
+
+                        <p>Action | Thriller</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
     
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- AOS Animation -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <script>
-        // Function to load components
+         // Function to load components
         async function loadComponents() {
             // Load Header
             const headerRes = await fetch('header.html');
@@ -171,6 +1035,61 @@
             setTimeout(() => {
                 if(preloader) preloader.classList.add('preloader-hidden');
             }, 2000); // 2.0 second delay
+
+            // Hero Video Controls
+            const hero = document.querySelector('.hero');
+            const hVideo = document.getElementById('heroVideo');
+            const hPlayBtn = document.getElementById('playBtn');
+
+            if (hero && hVideo && hPlayBtn) {
+                hero.addEventListener('mouseenter', () => hVideo.play());
+                hero.addEventListener('mouseleave', () => hVideo.pause());
+
+                hPlayBtn.addEventListener('click', () => {
+                    hVideo.play();
+                    hVideo.muted = false; // Click panna sound varum
+                });
+            }
+
+            // Movie Card Logic (Hover Preview & Click to Play)
+            document.querySelectorAll('.movie-card').forEach(card => {
+                const mVideo = card.querySelector('.movie-video');
+                const mPlayBtn = card.querySelector('.play-btn');
+
+                // Hover panna lite-ah preview odum
+                card.addEventListener('mouseenter', () => {
+                    if (mVideo) {
+                        mVideo.play();
+                        mVideo.style.opacity = "1";
+                    }
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    if (mVideo && !mVideo.hasAttribute('data-playing')) {
+                        mVideo.pause();
+                        mVideo.style.opacity = "0";
+                    }
+                });
+
+                // Play button click panna video sound-oda odum
+                if (mPlayBtn && mVideo) {
+                    mPlayBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (mVideo.paused || !mVideo.hasAttribute('data-playing')) {
+                            mVideo.play();
+                            mVideo.muted = false;
+                            mVideo.style.opacity = "1";
+                            mVideo.setAttribute('data-playing', 'true');
+                            mPlayBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+                        } else {
+                            mVideo.pause();
+                            mVideo.muted = true;
+                            mVideo.removeAttribute('data-playing');
+                            mPlayBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+                        }
+                    });
+                }
+            });
         }
 
         loadComponents();

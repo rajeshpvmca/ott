@@ -34,6 +34,11 @@
     
     <!-- Hero Section -->
     <section class="hero">
+        <video muted loop playsinline class="hero-video" id="heroVideo">
+            <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7" data-aos="fade-right">
@@ -42,17 +47,8 @@
                         Watch trending movies, premium web series, live sports and entertainment anytime anywhere.
                     </p>
 
-                    <!-- <div class="d-flex ">
-                    <button class="btn btn-danger rounded-pill px-4 me-3">
-                        <i class="bi bi-play-fill"></i> Watch Now
-                    </button>
-
-                    <button class="btn btn-outline-light rounded-pill px-4 ">
-                        More
-                    </button>
-                </div> -->
                 <div class="d-flex gap-3">
-                    <button class="btn btn-danger rounded-pill px-3"><i class="bi bi-play-fill"></i> Watch Now</button>
+                    <button class="btn btn-danger rounded-pill px-4" id="playBtn"><i class="bi bi-play-fill"></i> Watch Now</button>
                     <button class="btn btn-outline-light rounded-pill px-3">Explore</button>
                 </div>
 
@@ -64,68 +60,571 @@
     </section>    
     
     <!-- Trending Movies -->
-    <section class="py-5" id="movies">
-        <div class="container">
-            <h2 class="section-title text-center" data-aos="fade-up">Trending Movies</h2>
+<!-- Trending Movies -->
+<section class="py-5" id="movies">
 
-            <div class="row g-4">
+    <div class="container">
 
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
-                    <div class="movie-card">
-                        <img src="assets/images/trending1.webp" alt="movie">
-                        <div class="play-overlay">
-                            <i class="bi bi-play-circle-fill play-icon"></i>
-                        </div>
-                        <div class="movie-content">
-                            <h5>Dark Knight</h5>
-                            <p>Action | Thriller</p>
-                        </div>
+        <h2 class="section-title text-center mb-5"
+            data-aos="fade-up">
+
+            Trending Movies
+
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Movie 1 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <!-- Image -->
+                    <img src="assets/images/leo.webp"
+                         class="movie-img"
+                         alt="Leo">
+
+                    <!-- Video -->
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/leo.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <!-- Overlay -->
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
                     </div>
-                </div>
 
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="movie-card">
-                        <img src="assets/images/trending2.webp" alt="movie">
-                        <div class="play-overlay">
-                            <i class="bi bi-play-circle-fill play-icon"></i>
-                        </div>
-                        <div class="movie-content">
-                            <h5>Red Notice</h5>
-                            <p>Crime | Action | Comedy</p>
-                        </div>
-                    </div>
-                </div>
+                    <!-- Content -->
+                    <div class="movie-content">
 
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="movie-card">
-                        <img src="assets/images/trending3.webp" alt="movie">
-                        <div class="play-overlay">
-                            <i class="bi bi-play-circle-fill play-icon"></i>
-                        </div>
-                        <div class="movie-content">
-                            <h5>Moon Light</h5>
-                            <p>Drama | Sci-Fi | Fantasy</p>
-                        </div>
-                    </div>
-                </div>
+                        <h5>Leo</h5>
 
-                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="movie-card">
-                        <img src="assets/images/trending4.webp" alt="movie">
-                        <div class="play-overlay">
-                            <i class="bi bi-play-circle-fill play-icon"></i>
-                        </div>
-                        <div class="movie-content">
-                            <h5>Kingdom War</h5>
-                            <p>Adventure | Historical</p>
-                        </div>
+                        <p>Action | Thriller | Tamil</p>
+
                     </div>
+
                 </div>
 
             </div>
+
+            <!-- Movie 2 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/jawan.webp"
+                         class="movie-img"
+                         alt="Jawan">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/jawan.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Jawan</h5>
+
+                        <p>Action | Drama | Hindi</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 3 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/johnwick.webp"
+                         class="movie-img"
+                         alt="John Wick">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/johnwick.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>John Wick 4</h5>
+
+                        <p>Action | Crime | English</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Movie 4 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/avatar.webp"
+                         class="movie-img"
+                         alt="Avatar">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/avatar.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Avatar 2</h5>
+
+                        <p>Sci-Fi | Adventure | English</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-    </section>
+
+    </div>
+
+</section>
     
+   
+ <!-- Live Sports -->
+<section class="py-5" id="sports">
+
+    <div class="container">
+
+        <h2 class="section-title text-center mb-5"
+            data-aos="fade-up">
+
+            Live Sports
+
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Cricket -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <!-- Image -->
+                    <img src="assets/images/cricket.webp"
+                         class="movie-img"
+                         alt="Cricket">
+
+                    <!-- Video -->
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/cricket.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <!-- Overlay -->
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <!-- Content -->
+                    <div class="movie-content">
+
+                        <h5>Cricket Fever</h5>
+
+                        <p>IPL | International Cricket</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Football -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/football.webp"
+                         class="movie-img"
+                         alt="Football">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/football.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Football Legends</h5>
+
+                        <p>UEFA | FIFA World Cup</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Volleyball -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/volleyball.webp"
+                         class="movie-img"
+                         alt="Volleyball">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/volleyball.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Volleyball Arena</h5>
+
+                        <p>Championship | Indoor League</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Basketball -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/basketball.webp"
+                         class="movie-img"
+                         alt="Basketball">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/basketball.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Basketball Kings</h5>
+
+                        <p>NBA | Playoffs</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- TV Shows -->
+<section class="py-5" id="tvshows">
+
+    <div class="container">
+
+        <h2 class="section-title text-center mb-5"
+            data-aos="fade-up">
+
+            Trending TV Shows
+
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Cooku With Comali -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <!-- Image -->
+                    <img src="assets/images/cwc.webp"
+                         class="movie-img"
+                         alt="Cooku With Comali">
+
+                    <!-- Video -->
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/cwc.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <!-- Overlay -->
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <!-- Content -->
+                    <div class="movie-content">
+
+                        <h5>Cooku With Comali</h5>
+
+                        <p>Comedy | Reality | Tamil</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bigg Boss Tamil -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/biggboss.webp"
+                         class="movie-img"
+                         alt="Bigg Boss Tamil">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/biggboss.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Bigg Boss Tamil</h5>
+
+                        <p>Reality | Entertainment</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Squid Game -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/squidgame.webp"
+                         class="movie-img"
+                         alt="Squid Game">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/squidgame.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Squid Game</h5>
+
+                        <p>Thriller | Survival | Korean</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Wednesday -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="movie-card">
+
+                    <img src="assets/images/wednesday.webp"
+                         class="movie-img"
+                         alt="Wednesday">
+
+                    <video class="movie-video"
+                           muted
+                           loop
+                           preload="metadata">
+
+                        <source src="assets/videos/wednesday.mp4"
+                                type="video/mp4">
+
+                    </video>
+
+                    <div class="play-overlay">
+
+                        <button class="play-btn">
+
+                            <i class="bi bi-play-fill"></i>
+
+                        </button>
+
+                    </div>
+
+                    <div class="movie-content">
+
+                        <h5>Wednesday</h5>
+
+                        <p>Fantasy | Mystery | English</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
     
     <!-- Features -->
     <section class="py-5" id="features">
@@ -210,6 +709,61 @@
             setTimeout(() => {
                 if(preloader) preloader.classList.add('preloader-hidden');
             }, 2000); // 2.0 second delay
+
+            // Hero Video Controls
+            const hero = document.querySelector('.hero');
+            const hVideo = document.getElementById('heroVideo');
+            const hPlayBtn = document.getElementById('playBtn');
+
+            if (hero && hVideo && hPlayBtn) {
+                hero.addEventListener('mouseenter', () => hVideo.play());
+                hero.addEventListener('mouseleave', () => hVideo.pause());
+
+                hPlayBtn.addEventListener('click', () => {
+                    hVideo.play();
+                    hVideo.muted = false; // Click panna sound varum
+                });
+            }
+
+            // Movie Card Logic (Hover Preview & Click to Play)
+            document.querySelectorAll('.movie-card').forEach(card => {
+                const mVideo = card.querySelector('.movie-video');
+                const mPlayBtn = card.querySelector('.play-btn');
+
+                // Hover panna lite-ah preview odum
+                card.addEventListener('mouseenter', () => {
+                    if (mVideo) {
+                        mVideo.play();
+                        mVideo.style.opacity = "1";
+                    }
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    if (mVideo && !mVideo.hasAttribute('data-playing')) {
+                        mVideo.pause();
+                        mVideo.style.opacity = "0";
+                    }
+                });
+
+                // Play button click panna video sound-oda odum
+                if (mPlayBtn && mVideo) {
+                    mPlayBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (mVideo.paused || !mVideo.hasAttribute('data-playing')) {
+                            mVideo.play();
+                            mVideo.muted = false;
+                            mVideo.style.opacity = "1";
+                            mVideo.setAttribute('data-playing', 'true');
+                            mPlayBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+                        } else {
+                            mVideo.pause();
+                            mVideo.muted = true;
+                            mVideo.removeAttribute('data-playing');
+                            mPlayBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+                        }
+                    });
+                }
+            });
         }
 
         loadComponents();
