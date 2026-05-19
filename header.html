@@ -1,35 +1,89 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Stackly</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logoStackly.webp"
+                 width="170"
+                 alt="Logo">
+        </a>
+
+        <!-- Hamburger -->
+        <button class="navbar-toggler border-0 shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
+        <!-- Mobile Menu -->
+        <div class="collapse navbar-collapse mobile-menu"
+             id="navbarNav">
+
+            <!-- Top -->
+            <div class="d-flex justify-content-between align-items-center w-100 mb-5 d-lg-none">
+
+                <img src="assets/images/logoStackly.webp"
+                     width="150"
+                     alt="Logo">
+
+                <!-- Close -->
+                <!-- <button class="btn-close btn-close-white shadow-none"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav">
+                </button> -->
+
+            </div>
+
+            <!-- Nav Links -->
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" href="index.html">
+                        Home
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="movies.html">Movies</a>
+                    <a class="nav-link" href="movies.html">
+                        Movies
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="features.html">Features</a>
+                    <a class="nav-link" href="features.html">
+                        Features
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="premium.html">Premium</a>
+                    <a class="nav-link" href="premium.html">
+                        Premium
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="blog.html">Blog</a>
+                    <a class="nav-link" href="blog.html">
+                        Blog
+                    </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
+                    <a class="nav-link" href="contact.html">
+                        Contact Us
+                    </a>
                 </li>
-                <li class="nav-item ms-3">
-                    <a href="signin.html" class="btn btn-danger rounded-pill px-4">Sign In</a>
+
+                <li class="nav-item ms-lg-3 mt-4 mt-lg-0">
+                    <a href="signin.html"
+                       class="btn btn-danger rounded-pill px-4">
+                        Sign In
+                    </a>
                 </li>
+
             </ul>
+
         </div>
     </div>
 </nav>
