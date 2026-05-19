@@ -1,3 +1,5 @@
+
+
 // REGISTER
 
 const signupForm = document.getElementById("signupForm");

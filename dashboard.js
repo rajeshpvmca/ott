@@ -18,6 +18,12 @@ if (loggedInUser) {
 window.onload = function() {
     loadMenuByRole();
     showContent('home');
+
+    // Hide Preloader
+    const preloader = document.getElementById('preloader');
+    setTimeout(() => {
+        if(preloader) preloader.classList.add('preloader-hidden');
+    }, 2500); // 2.5 second delay
 };
 
 // Load Menu based on role

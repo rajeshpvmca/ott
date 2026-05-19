@@ -21,6 +21,14 @@
 </head>
 <body>
     
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="loader-ring"></div>
+            <img src="assets/images/logoStackly.webp" alt="Loading..." class="loader-logo-pulse">
+        </div>
+    </div>
+
     <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
     
@@ -196,6 +204,12 @@
                 duration: 1200,
                 once: true
             });
+
+            // Hide Preloader
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                if(preloader) preloader.classList.add('preloader-hidden');
+            }, 2000); // 2.0 second delay
         }
 
         loadComponents();
