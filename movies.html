@@ -1075,7 +1075,21 @@
                 if (mPlayBtn && mVideo) {
                     mPlayBtn.addEventListener('click', (e) => {
                         e.stopPropagation();
+
+                        // Find any video currently playing
+                        const currentPlaying = document.querySelector('video[data-playing="true"]');
+
                         if (mVideo.paused || !mVideo.hasAttribute('data-playing')) {
+                            // If another video is playing, stop it first
+                            if (currentPlaying && currentPlaying !== mVideo) {
+                                currentPlaying.pause();
+                                currentPlaying.muted = true;
+                                currentPlaying.style.opacity = "0";
+                                currentPlaying.removeAttribute('data-playing');
+                                const prevBtn = currentPlaying.closest('.movie-card').querySelector('.play-btn');
+                                if (prevBtn) prevBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+                            }
+
                             mVideo.play();
                             mVideo.muted = false;
                             mVideo.style.opacity = "1";
