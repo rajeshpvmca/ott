@@ -34,10 +34,26 @@
             color:white !important;
             margin:0 10px;
             transition:0.3s;
+            position: relative;
         }
         
-        .nav-link:hover{
-            color:#ff003c !important;
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ff003c;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #ff003c !important;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
         }
 
         .hero{
@@ -57,6 +73,7 @@
             height: 100%;
             object-fit: cover;
             z-index: 0;
+            animation: zoomBg 20s infinite alternate ease-in-out;
         }
 
         .hero-overlay {
@@ -77,6 +94,9 @@
         .hero h1{
             font-size:70px;
             font-weight:700;
+            background: linear-gradient(45deg, #fff 30%, #ff003c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .btn-play-hero {
@@ -113,6 +133,17 @@
             transform:translateY(-5px);
         }
 
+        /* Pulse Animation for Hero Button */
+        .pulse-btn {
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 60, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 0, 60, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 60, 0); }
+        }
+
         /* .section-title{
             font-size:35px;
             font-weight:700;
@@ -128,15 +159,35 @@
 }
 
 .movie-hero {
-            height: 80vh;
-            background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.2)), 
-                        url('assets/images/moviesbanner.webp');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-        }
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    z-index: 1;
+}
+
+.movie-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.2)), 
+                url('assets/images/moviesbanner.webp');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    animation: zoomBg 20s infinite alternate ease-in-out;
+}
+
+.movie-hero h1 {
+    background: linear-gradient(45deg, #fff 30%, #ff003c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 /* Card */
 .movie-card{

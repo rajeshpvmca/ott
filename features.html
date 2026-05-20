@@ -109,20 +109,27 @@
             const headerRes = await fetch('header.html');
             document.getElementById('header-placeholder').innerHTML = await headerRes.text();
             
+            // Set Active Link based on current page
+            const currentPath = window.location.pathname.split("/").pop() || "index.html";
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPath) link.classList.add('active');
+            });
+            
             // Load Footer
             const footerRes = await fetch('footer.html');
             document.getElementById('footer-placeholder').innerHTML = await footerRes.text();
 
-            // Initialize AOS after components load
-            AOS.init({
-                duration: 1200,
-                once: true
-            });
-
             // Hide Preloader
             const preloader = document.getElementById('preloader');
             setTimeout(() => {
-                if(preloader) preloader.classList.add('preloader-hidden');
+                if(preloader) {
+                    preloader.classList.add('preloader-hidden');
+                    // Initialize AOS only after preloader is hidden
+                    AOS.init({
+                        duration: 1200,
+                        once: true
+                    });
+                }
             }, 2000); // 2.0 second delay
         }
 

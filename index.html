@@ -41,14 +41,14 @@
 
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-7" data-aos="fade-right">
-                    <h1>Unlimited Movies, TV Shows & Web Series</h1>
-                    <p class="my-4">
+                <div class="col-lg-7">
+                    <h1 data-aos="fade-up" data-aos-delay="200">Unlimited Movies, TV Shows & Web Series</h1>
+                    <p class="my-4" data-aos="fade-up" data-aos-delay="400">
                         Watch trending movies, premium web series, live sports and entertainment anytime anywhere.
                     </p>
 
-                <div class="d-flex gap-3">
-                    <button class="btn btn-danger rounded-pill px-4" id="playBtn"><i class="bi bi-play-fill"></i> Watch Now</button>
+                <div class="d-flex gap-3" data-aos="fade-up" data-aos-delay="600">
+                    <button class="btn btn-danger rounded-pill px-4 pulse-btn" id="playBtn"><i class="bi bi-play-fill"></i> Watch Now</button>
                     <button class="btn btn-outline-light rounded-pill px-3">Explore</button>
                 </div>
 
@@ -694,20 +694,27 @@
             const headerRes = await fetch('header.html');
             document.getElementById('header-placeholder').innerHTML = await headerRes.text();
             
+            // Set Active Link based on current page
+            const currentPath = window.location.pathname.split("/").pop() || "index.html";
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPath) link.classList.add('active');
+            });
+            
             // Load Footer
             const footerRes = await fetch('footer.html');
             document.getElementById('footer-placeholder').innerHTML = await footerRes.text();
 
-            // Initialize AOS after components load
-            AOS.init({
-                duration: 1200,
-                once: true
-            });
-
             // Hide Preloader
             const preloader = document.getElementById('preloader');
             setTimeout(() => {
-                if(preloader) preloader.classList.add('preloader-hidden');
+                if(preloader) {
+                    preloader.classList.add('preloader-hidden');
+                    // Initialize AOS only after preloader is hidden
+                    AOS.init({
+                        duration: 1200,
+                        once: true
+                    });
+                }
             }, 2000); // 2.0 second delay
 
             // Hero Video Controls
