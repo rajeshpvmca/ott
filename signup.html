@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,68 +11,75 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
+
 <body>
-    
+
     <div class="auth-warper px-3">
-    <!-- Animated Background -->
-    <div class="bg-animation"></div>
+        <!-- Animated Background -->
+        <div class="bg-animation"></div>
 
-    <!-- Back to Home -->
-    <a href="index.html" class="back-home" data-aos="fade-right" data-aos-delay="100">
-        <i class="fa-solid fa-arrow-left"></i>
-        <span>Back to Home</span>
-    </a>
+        <!-- Back to Home -->
+        <a href="index.html" class="back-home" data-aos="fade-right" data-aos-delay="100">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Home</span>
+        </a>
 
-    <div class="signin-container p-lg-5 p-3" data-aos="zoom-in" data-aos-duration="1000">
-        <h2>Join Stackly</h2>
-        <form id="signupForm">
-            <div class="mb-3" data-aos="fade-up" data-aos-delay="200">
-                <input type="text" id="regName" class="form-control" placeholder="Full Name" required>
-            </div>
-            <div class="mb-3" data-aos="fade-up" data-aos-delay="300">
-                <select id="regRole" class="form-control form-select" required style="background-color: #1a1a24; color: white;">
-                    <option value="" disabled selected>Choose Role</option>
-                    <option value="User">User</option>
-                    <option value="Admin">Admin</option>
-                    <option value="Creator">Creator</option>
-                </select>
-            </div>
-            <div class="mb-3" data-aos="fade-up" data-aos-delay="400">
-                <input type="email" id="regEmail" class="form-control" placeholder="Email Address" required>
-            </div>
-            <div class="mb-3" data-aos="fade-up" data-aos-delay="500">
-                <div class="input-group">
-                    <input type="password" id="regPass" class="form-control" placeholder="Password" required>
-                    <button class="btn btn-outline-secondary toggle-password" type="button" style="border-radius: 0 10px 10px 0; border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.6);">
-                        <i class="fa-solid fa-eye"></i>
-                    </button>
+        <div class="signin-container p-lg-5 p-3" data-aos="zoom-in" data-aos-duration="1000">
+            <h2>Join Stackly</h2>
+            <form id="signupForm">
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="200">
+                    <input type="text" id="regName" class="form-control" placeholder="Full Name" required>
                 </div>
-            </div>
-            <div class="mb-3" data-aos="fade-up" data-aos-delay="600">
-                <div class="input-group">
-                    <input type="password" id="regConfirmPass" class="form-control" placeholder="Confirm Password" required>
-                    <button class="btn btn-outline-secondary toggle-password" type="button" style="border-radius: 0 10px 10px 0; border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.6);">
-                        <i class="fa-solid fa-eye"></i>
-                    </button>
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="300">
+                    <select id="regRole" class="form-control form-select" required
+                        style="background-color: #1a1a24; color: white;">
+                        <option value="" disabled selected>Choose Role</option>
+                        <option value="User">User</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Creator">Creator</option>
+                    </select>
                 </div>
-            </div>
-            <div class="mb-3 form-check" data-aos="fade-up" data-aos-delay="700">
-                <input type="checkbox" class="form-check-input" id="terms" required>
-                <label class="form-check-label small" for="terms">I agree to the Terms & Conditions</label>
-            </div>
-            <button type="submit" class="btn-signin" data-aos="fade-up" data-aos-delay="800">Create Account</button>
-            <p class="text-center mt-3 small" data-aos="fade-up" data-aos-delay="900">
-                Already have an account? <a href="signin.html" class="text-danger fw-bold text-decoration-none">Login</a>
-            </p>
-        </form>
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="400">
+                    <input type="email" id="regEmail" class="form-control" placeholder="Email Address" required>
+                </div>
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="500">
+                    <div class="input-group">
+                        <input type="password" id="regPass" class="form-control" placeholder="Password" required>
+                        <button class="btn btn-outline-secondary toggle-password" type="button"
+                            style="border-radius: 0 10px 10px 0; border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.6);">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="600">
+                    <div class="input-group">
+                        <input type="password" id="regConfirmPass" class="form-control" placeholder="Confirm Password"
+                            required>
+                        <button class="btn btn-outline-secondary toggle-password" type="button"
+                            style="border-radius: 0 10px 10px 0; border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.6);">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-3 form-check" data-aos="fade-up" data-aos-delay="700">
+                    <input type="checkbox" class="form-check-input" id="terms" required>
+                    <label class="form-check-label small" for="terms">I agree to the Terms & Conditions</label>
+                </div>
+                <button type="submit" class="btn-signin" data-aos="fade-up" data-aos-delay="800">Create Account</button>
+                <p class="text-center mt-3 small" data-aos="fade-up" data-aos-delay="900">
+                    Already have an account? <a href="signin.html"
+                        class="text-danger fw-bold text-decoration-none">Login</a>
+                </p>
+            </form>
+        </div>
     </div>
-</div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -84,6 +92,7 @@
             once: true
         });
     </script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

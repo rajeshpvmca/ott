@@ -104,7 +104,7 @@ function showContent(type){
             roleContent = `
                 <div class="p-4 rounded-4 mb-4 border border-danger border-opacity-25" style="background: linear-gradient(90deg, rgba(255,0,60,0.1) 0%, rgba(114,9,183,0.1) 100%);" data-aos="fade-down">
                     <h2 class="fw-bold" style="color: #ff003c;"><i class="fa-solid fa-video me-2"></i>Creator Studio</h2>
-                    <p class="text-white opacity-75">Your latest content is performing exceptionally well! Keep creating.</p>
+                    <p class="text-white-50 opacity-75">Your latest content is performing exceptionally well! Keep creating.</p>
                     <button class="btn btn-danger btn-sm rounded-pill px-4 mt-2 shadow-sm"><i class="fa-solid fa-upload me-2"></i>Upload New Content</button>
                 </div>
                 <div class="row g-4 mt-2">
@@ -167,7 +167,7 @@ function showContent(type){
                     </div>
                     <div class="col-md ps-md-4">
                         <h2 class="fw-bold mb-1">${loggedInUser.name}</h2>
-                        <p class="text-white mb-2"><i class="fa-solid fa-envelope me-2"></i>${loggedInUser.email}</p>
+                        <p class="text-white-50 mb-2"><i class="fa-solid fa-envelope me-2"></i>${loggedInUser.email}</p>
                         <span class="badge bg-danger border px-3 py-2"><i class="fa-solid fa-user-gear me-2"></i>Account Type: ${loggedInUser.role}</span>
                     </div> 
                 </div>
@@ -279,7 +279,7 @@ function showContent(type){
         contentBox.innerHTML = `
             <div class="p-0" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="fw-bold" style="color: #ff003c;"><i class="fa-solid fa-chart-pie me-2"></i>Advanced Analytics</h2>
-                <p class="text-white">Detailed insights into platform performance and user engagement.</p>
+                <p class="text-white-50">Detailed insights into platform performance and user engagement.</p>
                 <hr>
                 <div class="row g-4 mt-4">
                     <div class="col-lg-6" data-aos="fade-up">
@@ -313,7 +313,7 @@ function showContent(type){
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <div>
                         <h2 class="fw-bold" style="color: #ff003c;"><i class="fa-solid fa-film me-2"></i>My Content Library</h2>
-                        <p class="text-white">Overview of your uploaded movies and series, and their status.</p>
+                        <p class="text-white-50">Overview of your uploaded movies and series, and their status.</p>
                     </div>
                     <button class="btn btn-danger rounded-pill px-4 shadow-sm"><i class="fa-solid fa-plus me-2"></i>Add New</button>
                 </div>
@@ -325,10 +325,10 @@ function showContent(type){
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3">
                                     <span class="badge bg-danger px-3 py-2">Movie</span>
-                                    <span class="text-muted small">Updated 2h ago</span>
+                                    <span class="text-white-50 small">Updated 2h ago</span>
                                 </div>
                                 <h5 class="fw-bold">The Martian: Redux</h5>
-                                <p class="small text-muted">Sci-Fi thriller about a lone survivor on Mars. Remastered for 4K.</p>
+                                <p class="small text-white-50">Sci-Fi thriller about a lone survivor on Mars. Remastered for 4K.</p>
                                 <div class="mb-3">
                                     <div class="d-flex justify-content-between mb-1 small">
                                         <span>Processing</span>
@@ -354,10 +354,10 @@ function showContent(type){
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3">
                                     <span class="badge bg-danger px-3 py-2">Web Series</span>
-                                    <span class="text-muted small">Updated 1d ago</span>
+                                    <span class="text-white-50 small">Updated 1d ago</span>
                                 </div>
                                 <h5 class="fw-bold">Stranger Days: Season 2</h5>
-                                <p class="small text-muted">Supernatural drama. Episode 4 "The Rift" is currently being encoded.</p>
+                                <p class="small text-white-50">Supernatural drama. Episode 4 "The Rift" is currently being encoded.</p>
                                 <div class="mb-3">
                                     <div class="d-flex justify-content-between mb-1 small">
                                         <span>Encoding</span>
@@ -386,7 +386,7 @@ function showContent(type){
         contentBox.innerHTML = `
             <div class="p-0" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="fw-bold" style="color: #ff003c;"><i class="fa-solid fa-heart me-2"></i>My Watchlist</h2>
-                <p class="text-white">Your curated list of movies and shows to watch next.</p>
+                <p class="text-white-50">Your curated list of movies and shows to watch next.</p>
                 <hr>
                 <div class="row g-4 mt-2">
                     <div class="col-md-4">
@@ -426,7 +426,7 @@ function showContent(type){
         contentBox.innerHTML = `
             <div class="p-0" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="fw-bold" style="color: #ff003c;"><i class="fa-solid fa-chart-line me-2"></i>Audience Insights</h2>
-                <p class="text-white">Analyze your viewership demographics and engagement metrics.</p>
+                <p class="text-white-50">Analyze your viewership demographics and engagement metrics.</p>
                 <hr>
 
                 <!-- Analytics Stat Cards -->
@@ -479,7 +479,7 @@ function showContent(type){
         contentBox.innerHTML = `
             <div class="p-0" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="fw-bold" style="color: #ff003c;"><i class="fa-solid fa-gear me-2"></i>Account Settings</h2>
-                <p class="text-white">Manage your profile, preferences, and security settings.</p>
+                <p class="text-white-50">Manage your profile, preferences, and security settings.</p>
                 </div>
                 <hr>
                 <div class="row g-4 mt-2">
@@ -550,7 +550,7 @@ function showContent(type){
         contentBox.innerHTML = `
             <div class="p-0" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="fw-bold" style="color: #ff003c;"><i class="fa-solid fa-gear me-2"></i>Creator Settings</h2>
-                <p class="text-white">Manage your content, monetization, and notification preferences.</p>
+                <p class="text-white-50">Manage your content, monetization, and notification preferences.</p>
                 <hr>
                 <div class="row g-4 mt-2">
                     <div class="col-lg-6">
