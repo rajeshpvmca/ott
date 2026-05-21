@@ -176,7 +176,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.2)), 
-                url('assets/images/moviesbanner.webp');
+                url('/assets/images/moviesbanner.webp');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -828,7 +828,7 @@
     background:
     linear-gradient(rgba(0,0,0,0.7),
     rgba(0,0,0,0.8)),
-    url('assets/images/blogbanner.webp');
+    url('/assets/images/blogbanner.webp');
 
     background-size:cover;
     background-position:center;
